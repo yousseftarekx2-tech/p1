@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="موقع الحسيني الرسمي - ملك السوبيا في مصر. استمتع بأشهى العصائر، السموزي، المشروبات الساخنة، والكنافة الطازجة. زورنا في مدينة نصر!">
+<meta name="keywords" content="الحسيني, عصائر, سموزي, مشروبات ساخنة, كنافة, مدينة نصر, مصر, سوبر ماركت, مشروبات طبيعية">
+<title>الحسيني</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Tahoma,Arial;background:#f9f9f9;color:#333}
+
+/* ===== HEADER ===== */
+header{
+  background:#2e7d32;
+  padding:10px 20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  font-size:20px;
+  font-weight:bold;
+  text-decoration:none;
+}
+.logo img{height:45px; border-radius:50%;}
+
+/* قائمة المنيو */
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
+}
+.lang-btn{
+  background:#fff;
+  color:#2e7d32;
+  border:none;
+  padding:5px 12px;
+  border-radius:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:40px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+section h2{
+  margin-bottom:20px;
+  color:#2e7d32;
+  text-align:center;
+}
+
+/* ===== CAROUSELS ===== */
+.carousel-container{
+  position:relative;
+  overflow:hidden;
+}
+.carousel-track{
+  display:flex;
+  gap:15px;
+  transition: transform 0.5s linear;
+}
+.carousel-track li{
+  min-width:200px;
+  background:#fff;
+  border-radius:10px;
+  padding:10px;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.1);
+  flex-shrink:0;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.carousel-track li:hover{
+  transform: scale(1.05);
+  z-index:2;
+}
+.carousel-track img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:8px;
+}
+.carousel-track li h3{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  background: rgba(46,125,50,0.8);
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.carousel-track li:hover h3{
+  opacity:1;
+}
+
+/* ===== MAP ===== */
+.map-box{
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+.map-box iframe{
+  width:100%;
+  height:350px;
+  border:0;
+}
+.address{
+  background:#fff;
+  padding:20px;
+  text-align:center;
+  border-radius:0 0 15px 15px;
+}
+.address p{
+  margin:6px 0;
+  font-size:15px;
+}
+
+/* ===== CONTACT ===== */
+.contact-box{
+  max-width:500px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+.contact-item{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:10px;
+  margin:12px 0;
+  font-size:16px;
+}
+.contact-item img{
+  width:24px;
+  height:24px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.contact-item img:hover{
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 5px #2e7d32);
+}
+.contact-item a{
+  color:#2e7d32;
+  text-decoration:none;
+  font-weight:bold;
+}
+.contact-item a:hover{
+  color:#145214;
+  text-decoration:underline;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#2e7d32;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  margin-top:40px;
+}
+
+/* ===== MEDIA ===== */
+@media(max-width:768px){
+  .carousel-track li{min-width:150px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#">
+      <img src="logo.png" alt="Logo">
+      <span>الحسيني</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#popular">🔥 الأكثر مبيعًا</a></li>
+        <li><a href="#juices">🥤 العصائر</a></li>
+        <li><a href="#smoothie">🍓 السموزي</a></li>
+        <li><a href="#hot">☕ المشروبات الساخنة</a></li>
+        <li><a href="#kunafa">🍮 الكنافة</a></li>
+        <li><a href="#location">📍 موقعنا</a></li>
+        <li><a href="#contact">📞 تواصل معنا</a></li>
+      </ul>
+    </nav>
+    <button class="lang-btn" onclick="toggleLang()">EN</button>
+  </div>
+</header>
+
+<!-- ===== CAROUSELS ===== -->
+<section id="popular">
+<h2>🔥 الأكثر مبيعًا</h2>
+<div class="carousel-container">
+  <ul class="carousel-track">
+    <li><img src="pexels-isabella-mendes-107313-338713.jpg"><h3>عصير برتقال</h3><p>20 ج</p></li>
+    <li><img src="pexels-shameel-mukkath-3421394-14930492.jpg"><h3>عصير مانجو</h3><p>25 ج</p></li>
+    <li><img src="pexels-enesfilm-8029156.jpg"><h3>كنافة بالجبنة</h3><p>35 ج</p></li>
+    <li><img src="pexels-brunoscramgnon-1337825.jpg"><h3>موز</h3><p>18 ج</p></li>
+    <li><img src="smoothie-mango.jpg"><h3>سموزي مانجو</h3><p>28 ج</p></li>
+  </ul>
+</div>
+</section>
+
+<section id="juices">
+<h2>🥤 العصائر</h2>
+<div class="carousel-container">
+  <ul class="carousel-track">
+    <li><img src="pexels-isabella-mendes-107313-338713.jpg"><h3>برتقال</h3><p>20 ج</p></li>
+    <li><img src="pexels-hallie-77354130-18186231.jpg"><h3>مانجو</h3><p>25 ج</p></li>
+    <li><img src="pexels-shameel-mukkath-3421394-17612776.jpg"><h3>فراولة</h3><p>22 ج</p></li>
+    <li><img src="pexels-brunoscramgnon-1337825.jpg"><h3>موز</h3><p>18 ج</p></li>
+    <li><img src="pexels-umarali07-28053226.jpg"><h3>كيوي</h3><p>24 ج</p></li>>
+  </ul>
+</div>
+</section>
+
+<section id="smoothie">
+<h2>🍓 السموزي</h2>
+<div class="carousel-container">
+  <ul class="carousel-track">
+    <li><img src="front-view-assortment-with-fresh-orange-smoothie.jpg"><h3>سموزي مانجو</h3><p>28 ج</p></li>
+    <li><img src="smoothie-banana-strawberry.jpg"><h3>سموزي موز وفراولة</h3><p>30 ج</p></li>
+    <li><img src="berry-smoothies.jpg"><h3>سموزي توت</h3><p>27 ج</p></li>
+    <li><img src="front-view-strawberry-milkshake-with-copy-space.jpg"><h3>سموزي توت</h3><p>27 ج</p></li>
+    <li><img src="berry-smoothies.jpg"><h3>سموزي موز وفراولة</h3><p>30 ج</p></li>
+  </ul>
+</div>
+</section>
+
+<section id="hot">
+<h2>☕ المشروبات الساخنة</h2>
+<div class="carousel-container">
+  <ul class="carousel-track">
+    <li><img src="pexels-fallon-michael-1928485-3551717.jpg"><h3>قهوة</h3><p>15 ج</p></li>
+    <li><img src="pexels-hasanalbari-1493079.jpg"><h3>شاي</h3><p>12 ج</p></li>
+    <li><img src="pexels-fallon-michael-1928485-3551717.jpg"><h3>شوكولاتة ساخنة</h3><p>18 ج</p></li>
+    <li><img src="pexels-luna-joie-3299599-34519661.jpg"><h3>قهوة</h3><p>15 ج</p></li>
+    <li><img src="pexels-hasanalbari-1493079.jpg"><h3>شاي</h3><p>12 ج</p></li>
+  </ul>
+</div>
+</section>
+
+<section id="kunafa">
+<h2>🍮 الكنافة</h2>
+<div class="carousel-container">
+  <ul class="carousel-track">
+    <li><img src="pexels-enesfilm-8029156.jpg"><h3>كنافة بالجبنة</h3><p>35 ج</p></li>
+    <li><img src="pexels-enesfilm-9919647.jpg"><h3>كنافة بالفراوله</h3><p>35 ج</p></li>
+    <li><img src="pexels-eat-kubba-15863701-11833316.jpg"><h3>كنافة نابلسية</h3><p>40 ج</p></li>
+    <li><img src="pexels-enesfilm-8029156.jpg"><h3>كنافة بالجبنة</h3><p>35 ج</p></li>
+    <li><img src="pexels-enesfilm-9919647.jpg"><h3>كنافة بالفراوله</h3><p>35 ج</p></li>
+  </ul>
+</div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section id="location">
+<h2>📍 موقعنا</h2>
+<div class="map-box">
+<iframe src="https://www.google.com/maps?q=Nasr%20City%20Cairo&output=embed" loading="lazy"></iframe>
+</div>
+<div class="address">
+<p>الحسيني للعصائر</p>
+<p>مدينة نصر – شارع عباس العقاد – القاهرة</p>
+<p>📞 01012345678</p>
+</div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+<h2>📞 تواصل معنا</h2>
+<div class="contact-box">
+  <div class="contact-item">
+    <img src="icons8-phone-50.png" alt="Phone">
+    <a href="tel:01012345678">01012345678</a>
+  </div>
+  <div class="contact-item">
+    <img src="icons8-whatsapp-50.png" alt="WhatsApp">
+    <a href="https://wa.me/201012345678" target="_blank">01012345678 واتساب</a>
+  </div>
+  <div class="contact-item">
+    <img src="icons8-facebook-50.png" alt="Facebook">
+    <a href="https://facebook.com/USERNAME" target="_blank">فيسبوك</a>
+  </div>
+  <div class="contact-item">
+    <img src="icons8-tiktok-50.png" alt="TikTok">
+    <a href="https://tiktok.com/@USERNAME" target="_blank">تيك توك</a>
+  </div>
+</div>
+</section>
+
+<footer>© 2026 الحسيني | ملك السوبيا في مصر.</footer>
+
+<script>
+// ===== LANGUAGE SWITCH =====
+let currentLang = "ar";
+function toggleLang(){
+  currentLang = currentLang == "ar" ? "en" : "ar";
+  document.documentElement.dir = currentLang==="ar"?"rtl":"ltr";
+}
+
+// ===== LOOP لجميع الـ Carousel مع توقف عند Hover على القسم =====
+document.querySelectorAll('.carousel-container').forEach(container=>{
+  const track = container.querySelector('.carousel-track');
+  track.innerHTML += track.innerHTML; // clone العناصر لloop سلس
+  let scrollPos = 0;
+
+  function moveLoop(){
+    scrollPos += 1; 
+    if(scrollPos >= track.scrollWidth/2) scrollPos = 0;
+    track.style.transform = `translateX(-${scrollPos}px)`;
+  }
+
+  let interval = setInterval(moveLoop, 20);
+
+  container.addEventListener('mouseenter',()=>{clearInterval(interval);});
+  container.addEventListener('mouseleave',()=>{interval = setInterval(moveLoop, 20);});
+
+  let startX = 0;
+  track.addEventListener('touchstart', e => {startX = e.touches[0].clientX;});
+  track.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if(endX < startX - 20) scrollPos += 100;
+    if(endX > startX + 20) scrollPos -= 100;
+  });
+});
+
+toggleLang();
+</script>
+
+</body>
+</html>
+
